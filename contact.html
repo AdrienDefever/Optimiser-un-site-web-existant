@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="Default">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site">
@@ -36,15 +36,15 @@
 	<div class="container bloc-sm">
 		<div class="navbar-header">
 			<img src="img/agence-la-panthere-monochrome.svg" alt="logo agence La Panthère"></a>
-			<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+			<button id="nav-toggle" type="button" aria-label="bouton deroulant" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 				<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 			</button>
 		</div>
 		
 		<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
 			<ul class="site-navigation nav navbar-nav">
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="index.html" aria-label="Rendez vous sur notre page d'accueil">Accueil</a></li>
+				<li><a href="contact.html" aria-label="Rendez vous sur notre page contact">Contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -76,14 +76,14 @@
 			<div class="col-sm-6 formulaire">
 				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
 					<div class="form-group">
-						<label for="utilisateur">Nom</label>
-						<input type="text" id="utilisateur" name="Nom" class="form-control" required />
+						<label for="name">Nom</label>
+						<input type="text" id="name" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label for="adresse-mail">
+						<label for="email">
 							Adresse email
 						</label>
-						<input type="email" id="adresse-email" name="adresse-email" class="form-control" required />
+						<input type="email" id="email" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="maniere-connaissance">
@@ -102,11 +102,6 @@
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-6 adresse">
-				<p>
-					contact@agencelapanthere.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
-				</p>
-			</div>
 		</div>
 	</div>
 </div>
@@ -121,29 +116,31 @@
 <div class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
 	<div class="container bloc-sm">
 		<div class="row">
-			<div class="col-sm-12">
-				<p class="text-center white">
-					Agence La Panthère - Agence web basée à Lyon.<br>
-				</p>
+			<div class="col-sm-12 column">
+				<div class="col-sm-6 adresse">
+					<p>
+						contact@agencelapanthere.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
+					</p>
+				</div>
 				<div class="row row-no-gutters social">
 					<div class="col-sm-3">
-						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+						<div class="text-center social">
+							<a href="https://twitter.com/" class="social" aria-label="visualiser notre compte twitter"><span class="fa fa-twitter icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+						<div class="text-center social">
+							<a href="https://www.facebook.com/" class="social" aria-label="visualiser notre compte facebook"><span class="fa fa-facebook icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+						<div class="text-center social">
+							<a href="index.html" class="social" aria-label="visualiser notre compte dribble"><span class="fa fa-dribbble icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+						<div class="text-center social">
+							<a href="https://www.instagram.com/" class="social" aria-label="visualiser notre compte instagram"><span class="fa fa-instagram icon-md"></span></a>
 						</div>
 					</div>
 				</div>
