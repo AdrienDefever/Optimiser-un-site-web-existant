@@ -13,6 +13,11 @@ button {
     outline: none!important;
 }
 
+.navbar-header img {
+    height:40px;
+}
+
+
 a:hover {
     text-decoration: none;
     cursor: pointer;
@@ -31,7 +36,6 @@ a:hover {
     width: 100%;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -45,7 +49,7 @@ a:hover {
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 50px 50px;
 }
 
 .bloc-md {
@@ -78,21 +82,6 @@ a:hover {
 
 .bg-t-edge {
     background: top no-repeat;
-}
-
-.bloc-bg-texture::before {
-    content: "";
-    background-size: 2px 2px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
 }
 
 .b-parallax {
@@ -435,9 +424,21 @@ nav .caret {
     float: right;
 }
 
-.mg-md {
-    margin-top: 10px;
-    margin-bottom: 20px;
+.mg-md.text-center{
+    max-width:420px;
+    padding:5px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin:auto;
+    background-color: rgba(255, 255, 255, 0.975);
+    opacity: 0.8;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.mg-md-auto {
+    width:auto;
 }
 
 .mg-lg {
@@ -506,8 +507,8 @@ button {
 }
 
 .form-control {
-    border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    background-color: #f7cab5;
 }
 
 .scrollToTop {
@@ -516,7 +517,7 @@ button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    opacity: 0;
+    opacity: 100;
     z-index: 500;
     transition: all .3s ease-in-out;
 }
@@ -645,7 +646,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 label,
 .btn,
 a {
@@ -677,7 +677,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .tight-width-whitespace {
@@ -687,12 +687,11 @@ p {
 
 .h1 {
     font-size: 20px;
-    font-family: "Open Sans";
+    letter-spacing: 15px;
 }
 
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -700,8 +699,12 @@ p {
 }
 
 .social {
-    max-width: 400px;
-    margin: auto auto auto auto;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    margin:auto;
+    padding: 10px;
 }
 
 h2 {
@@ -753,13 +756,8 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(220, 160, 18, 0.753);
     padding: 40px 40px 40px 40px;
-}
-
-.bold-link {
-    font-weight: 900;
-    text-decoration: underline!important;
 }
 
 .bgc-white {
@@ -774,26 +772,33 @@ h4 {
     background-color: #F3976C;
 }
 
-.tc-white {
-    color: #F3976C!important;
-}
-
 .btn-atomic-tangerine {
-    background: #F3976C;
-    color: #FFFFFF!important;
+    background: #f38e6c;
+    color: black;
+    font-weight: bold;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #f38e6c;
+    color:black;
+    box-shadow: #F3976C 2px 5px 10px 10px;
+    border:#FFFFFF 2px solid;
 }
 
-.ltc-white {
-    color: #FFFFFF!important;
+.btn-atomic-tangerine-contactez-equipe {
+    width:180px;
+    background: #f38e6c;
+    color: black;
+    font-weight: bold;
+    margin: auto;
+    border-radius: 25px;
+    padding:5px;
 }
-
-.ltc-white:hover {
-    color: #cccccc!important;
+.btn-atomic-tangerine-contactez-equipe:hover {
+    background: #f38e6c;
+    color:black;
+    box-shadow: #F3976C 2px 5px 10px 10px;
+    border:#FFFFFF 2px solid;
 }
 
 .ltc-atomic-tangerine {
@@ -810,7 +815,7 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/dots-bg.webp");
 }
 
 .bg-lines-h2-bg {
@@ -818,11 +823,11 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg");
+    background-image: url("img/agence-la-panthere.webp");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.webp");
 }
 
 @media (max-width: 1024px) {
@@ -848,13 +853,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -1039,4 +1044,107 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+    .col-sm-6 img {
+        margin:auto;
+    }
+
+}
+
+.citation{
+    font-size:22px;
+    font-style: italic;
+}
+.article {
+    font-style:normal;
+    font-size:22px;
+}
+
+.col-sm-12 p{
+    font-size:20px;
+    color: black;
+} 
+
+.mg-md-new{
+    font-size:20px;
+    color: white;
+} 
+
+.contacter-equipe {
+    font-size:16px;
+    display: flex;
+    flex-direction: column;
+    color:black;
+}
+
+.hero-bloc-text{
+    letter-spacing: 5px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.891);
+    opacity: 0.8;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.column{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.col-sm-6 img {
+    width:270px;
+}
+
+.col-md-8 {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-md-8 span{
+    font-weight: bold;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.col-sm-4 p{
+    font-size: 14px;
+}
+
+.navbar-nav li:hover{
+    border-bottom: #F3976C 3px solid;
+    font-weight: bold;
+}
+
+.corps{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.formulaire{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    margin: auto;
+}
+
+.adresse{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
 }
